@@ -1,6 +1,6 @@
 header{
   text-align: center;
-  margin: -1.55em -1em 0em -1em;
+  margin: -1.55em -0.4em 0em -1em;
   padding: 1em;
   padding-bottom: 0em;
   justify-content: space-between;
@@ -24,7 +24,7 @@ header img{
   border-radius: 6px 6px;
   padding: 0em;
   box-shadow: 0px 3px 10px rgb(203, 199, 199);
-  height: 2em;
+  height: 2.5em;
 }
 
 .searchBar input[type=text]{
@@ -33,7 +33,7 @@ header img{
   background-color: rgb(235, 233, 233);
   border-width: 0px;
   padding-left: 0.4em;
-  font-size: 1em;
+  font-size: 1.25em;
 }
 
 .searchBar input[type=image]{
@@ -54,11 +54,8 @@ header img{
   margin: 0.1em;
 }
 
-.deroulant{
-    float: left;
-    width: 100%;
-    text-align: center;
-    position: relative;
+.profil{
+  font-size: 1.25em;
 }
 
 .profilEdit{
@@ -87,6 +84,9 @@ header img{
     padding: 10px 0px;
 }
 
+.profilEdit > ul li:hover .sous{
+    display: block;
+}
 
 .deroulantflex{
     display: flex;
@@ -98,9 +98,9 @@ header img{
 }
 
 .deroulantflex > p{
-    margin-top: 0.3vw;
+    margin-top: 0.40em;
     margin-left: 0.2vw;
-    font-size: 1.25em;
+    font-size: 1.35em;
 }
 
 .deroulantflex > *{
@@ -108,9 +108,28 @@ header img{
     margin: 0;
 }
 
+.deroulant{
+    float: left;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
 .deroulant > a{
     padding: 0;
     margin: 0;
+}
+
+.deroulant{
+    margin-left: -2vw;
+}
+
+.deroulant > a::after{
+    font-size: 12px;
+}
+
+.profilEdit > ul li:hover .sous{
+    display: block;
 }
 
 .sous{
@@ -122,18 +141,10 @@ header img{
     z-index: 1000;
 }
 
-.profilEdit > ul li:hover .sous{
-    display: block;
-}
-
-.deroulant{
-  margin-left: -2vw;
-}
-
 .sous li{
     float: none;
     width: 110%;
-    margin-left: -30%;
+    margin-left: -20%;
 }
 
 .sous li{
@@ -143,20 +154,83 @@ header img{
 .sous a:hover{
     border-bottom: none;
     background-color: RGBa(200,200,200,0.1);
-
 }
 
-.deroulant > a::after{
-    font-size: 12px;
+.sousTitleMenus{
+  text-decoration: underline;
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
-@media (max-width: 650px) {
+.sousListMenus > li > a{
+  text-decoration: none;
+  color: black;
+}
+
+.sousListMenus > li{
+  list-style: square;
+}
+
+.sousMenus, .sousListMenus, .sousTitleMenus{
+  list-style: none;
+  margin: 0;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.sousMenus{
+  display: none;
+  background-color: RGBa(250,250,250,0.9);
+  box-shadow: 0px 2px 8px #CCC;
+  position: absolute;
+  z-index: 1000;
+  text-align: left;
+  padding-left: 3em;
+  margin-left: -2em;
+}
+
+.sousMenus > li{
+  margin-left: -1.5em;
+}
+
+.sousMenus{
+  height: 93vh;
+  margin-top: 3em;
+}
+
+.sousListMenus li:hover{
+  border-bottom: none;
+  background-color: RGBa(200,200,200,0.2);
+}
+
+.sousTitleMenus:not(:first-child){
+  border-top: 2px black solid;
+  padding-top: 0.5em;
+}
+
+.sousListMenus > li{
+  font-size: 1.15em;
+  margin: 0 0.5em 0 -1em;
+  padding: 0.5em 8vw 0.5em 0;
+}
+
+.profilHeaderLeft{
+  display: none;
+}
+
+
+
+@media (max-width: 750px) {
   .profil{
     display: none;
   }
+
+  .profilHeaderLeft{
+    display: block;
+  }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 550px) {
   #magnifyingGlass {
     display: none;
   }
