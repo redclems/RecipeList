@@ -20,18 +20,39 @@
     </div>
 
     <ul id="sousMenusHeader" class="sousMenus">
-      <li class="sousTitleMenus" >Liste :</li>
+      <li class="sousTitleMenus" >
+        <a href="/">
+          <img src="<?= $file ?>/image/icon/home.svg" title="Retoure a l'accueil">
+          <h3>Accueil</h3>
+        </a>
+      </li>
+      <li class="sousTitleMenus" >
+        <a href="/liste">
+          <img src="<?= $file ?>/image/icon/liste.svg" title="Retoure a l'accueil">
+          <h3>Liste</h3>
+        </a>
+      </li>
       <li>
         <ul class="sousListMenus">
           <li><a href="#">Liste 1</a></li>
           <li><a href="#">Liste 2</a></li>
         </ul>
       </li>
-      <li class="sousTitleMenus profilHeaderLeft" >Profil :</li>
+      <li class="sousTitleMenus profilHeaderLeft" >
+        <a href="/liste">
+        <img class="profilHEADER infosCompte" src="<?= $file ?>/image/<?php if (isset($_SESSION['profilIMG'])) { echo $_SESSION['profilIMG']; }else{ echo 'icon/compte.svg'; } ?>" title="Informations du compte">
+        <h3>Profil</h3>
+      </a>
+      </li>
       <li class="profilHeaderLeft">
         <ul class="sousListMenus">
-          <li><a href="#">Modifier le profil</a></li>
-          <li><a href="#">Se déconnecter</a></li>
+          <?php
+          if ( isset($_SESSION['profil'])) { ?>
+            <li><a href="#">Connexion</a></li>
+          <?php } else { ?>
+            <li><a href="#">Modifier le profil</a></li>
+            <li><a href="#">Se déconnecter</a></li>
+        <?php } ?>
         </ul>
       </li>
     </ul>

@@ -156,10 +156,26 @@ header img{
     background-color: RGBa(200,200,200,0.1);
 }
 
-.sousTitleMenus{
+.sousTitleMenus a:hover, .sousListMenus a:hover{
+  color: rgb(88, 87, 87);
+  transition-duration: 0.5s;
   text-decoration: underline;
-  font-size: 1.25em;
-  font-weight: bold;
+  border-bottom: none;
+  background-color: RGBa(240,240,240,0.2);
+}
+
+.sousTitleMenus a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+.sousTitleMenus a{
+    display: flex;
+}
+
+.sousTitleMenus{
+    display: flex;
 }
 
 .sousListMenus > li > a{
@@ -194,14 +210,10 @@ header img{
 }
 
 .sousMenus{
-  height: 93vh;
+  min-height: 93vh;
   margin-top: 3em;
 }
 
-.sousListMenus li:hover{
-  border-bottom: none;
-  background-color: RGBa(200,200,200,0.2);
-}
 
 .sousTitleMenus:not(:first-child){
   border-top: 2px black solid;
@@ -227,6 +239,11 @@ header img{
 
   .profilHeaderLeft{
     display: block;
+  }
+
+  .sousMenus{
+    width: 100vw;
+    align-items: center;
   }
 }
 
