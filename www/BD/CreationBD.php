@@ -1,21 +1,27 @@
 <?php
-require("./www/BD/connect.php");
-date_default_timezone_set('Europe/Paris');
+require("./BD/connect.php");
+
 try{
-  // le fichier de BD s'appellera contacts.sqlite3
-  $file_db=new PDO('sqlite:BD.sqlite3');
-  $file_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+  $file_db=connect_bd();
 
   $file_db->exec("create table if not exists USER
   (
     email VarChar2(25),
-    password VarChar2(20),
+    password VarChar2(150),
     name VarChar2(20),
     surName VarChar2(20),
     dateBirth date,
     urlImage VarChar2(200),
     idPermission number(5),
     primary key (email)
+  );");
+
+  $file_db->exec("create table if not exists HISTORIC
+  (
+    idUser VarChar2(25),
+    date date,
+    idAction number(5),
+    primary key (idUser, date)
   );");
 
   $file_db->exec("create table if not exists HISTORICALLIST
@@ -124,16 +130,16 @@ try{
   (
     idRecipe number(10),
     idStep number(20),
-    order number(2),
+    orderStep number(2),
     primary key (idRecipe, idStep)
   );");
 
   $file_db->exec("create table if not exists STEP
   (
     id number(20),
-    idStep number(20),
+    idTypeStep number(20),
     request VarChar2(200),
-    primary key (idRecipe, idStep)
+    primary key (id, idTypeStep)
   );");
 
   $file_db->exec("create table if not exists TYPESTEP
@@ -144,10 +150,13 @@ try{
   );");
 
 
-  echo "Insertion en base reussie !";
+  echo "Data base was creat!";
   // on ferme la connexion
   $file_db=null;
+
 }
 catch(PDOException $ex){
   echo $ex->getMessage();
 }
+
+//require("./BD/InsertionBD.php");

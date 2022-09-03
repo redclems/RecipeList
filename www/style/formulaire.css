@@ -1,0 +1,63 @@
+input{
+    width: 40vw;
+    min-width: 80%;
+    height: 1.5em;
+    font-size: 1em;
+    background-color: #f4f4f4;
+}
+
+label{
+    font-size: 1.2em;
+}
+
+button, .button{
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #EEEEEE;
+    align-items: flex-start;
+    text-align: center;
+    color: buttontext;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-style: outset;
+    border-right-style: outset;
+    border-bottom-style: outset;
+    border-left-style: outset;
+    border-top-color: buttonface;
+    border-right-color: buttonface;
+    border-bottom-color: buttonface;
+    border-left-color: buttonface;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    box-sizing: border-box;
+    margin-top: 0em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75em;
+    font-family: system-ui;
+    font-variant-caps: normal;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    font-size: 0.85em;
+
+}
+
+button{
+  background-color: #8bfaac;
+}
+
+.back {
+    background-color: #cc95fb;
+}
