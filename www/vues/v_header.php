@@ -4,6 +4,8 @@
     <?php session_start(); ?>
     <title><?= $sousTitre ?></title>
     <link rel="stylesheet" type="text/css" href="<?= $file ?>/style/header.css">
+    <link rel="stylesheet" type="text/css" href="<?= $file ?>/style/centerPage.css">
+    <link rel="stylesheet" type="text/css" href="<?= $file ?>/style/note.css">
 
     <meta charset="UTF-8">
 </head>
@@ -17,56 +19,86 @@
     <link rel="stylesheet" type="text/css" href="<?= $file ?>/style/headerLeft.css">
 
     <div id="buttonMenu">
-    	<div class="bar1 backroundStyle"></div>
-    	<div class="bar2 backroundStyle"></div>
-    	<div class="bar3 backroundStyle"></div>
+    	<div class="bar1 "></div>
+    	<div class="bar2 "></div>
+    	<div class="bar3 "></div>
     </div>
 
-    <ul id="sousMenusHeader" class="sousMenus">
-      <li class="sousTitleMenus" >
-        <a href="/">
-          <img src="<?= $file ?>/image/icon/home.svg" title="Retoure a l'accueil">
-          <h3>Accueil ?</h3>
-        </a>
-      </li>
 
-      <li class="sousTitleMenus" >
-        <div class="backroundStyle borderMenus"></div>
-        <a href="/liste">
-          <img src="<?= $file ?>/image/icon/liste.svg" title="Retoure a l'accueil">
-          <h3>Liste</h3>
-        </a>
-      </li>
+      <ul id="sousMenusHeader" class="sousMenus">
+        <li class="sousTitleMenus" >
+          <a href="/liste">
+            <img src="<?= $file ?>/image/icon/liste.png" title="Retoure a l'accueil">
+            <h3>Liste</h3>
+          </a>
+        </li>
 
-      <li>
-        <ul class="sousListMenus">
-          <li class="hoverStyle"><a href="#">○ Liste 1</a></li>
-          <li class="hoverStyle"><a href="#">○ Liste 2</a></li>
-        </ul>
-      </li>
+        <li>
+          <ul class="sousListMenus">
+            <li class=""><a href="#">Liste 1</a></li>
+            <li class=""><a href="#">Liste 2</a></li>
+            <li class=""><a href="#">Liste 3</a></li>
+          </ul>
+        </li>
 
-      <div class="backroundStyle borderMenus"></div>
-      <li class="sousTitleMenus profilHeaderLeft" >
-        <a href="/profil">
-          <img class="" src="<?php echo $file . '/image/icon/compte.svg'; ?>" title="Informations du compte">
-          <h3>Profil</h3>
-        </a>
-      </li>
+        <!-- _____________________________________ -->
 
-      <li class="profilHeaderLeft">
-        <ul class="sousListMenus">
-          <?php
-          if (!isset($_SESSION['profil'])) { ?>
-            <li class="hoverStyle"><a href="/profil">Connexion</a></li>
-            <li class="hoverStyle"><a href="/profil/add">Créer un compte</a></li>
-          <?php } else { ?>
-            <li class="hoverStyle"><a href="/profil/edit">Modifier le profil</a></li>
-            <li class="hoverStyle"><a href="/profil?act=disconnect">Se déconnecter</a></li>
-        <?php } ?>
-        </ul>
-      </li>
-    </ul>
+        <li class="sousTitleMenus" >
+          <a href="/recipe">
+            <img src="<?= $file ?>/image/icon/Recipe.png" title="Retoure a l'accueil">
+            <h3>Recette</h3>
+          </a>
+        </li>
+
+        <li>
+          <ul class="sousListMenus">
+            <li class=""><a href="#">Mets recette</a></li>
+            <li class=""><a href="#">Ajouter une recette</a></li>
+          </ul>
+        </li>
+
+        <!-- _____________________________________ -->
+
+        <li class="sousTitleMenus" >
+          <a href="/frigo">
+            <img src="<?= $file ?>/image/icon/Frigo.png" title="Retoure a l'accueil">
+            <h3>Mon Frigo</h3>
+          </a>
+        </li>
+
+        <li>
+          <ul class="sousListMenus">
+          </ul>
+        </li>
+
+        <!-- _____________________________________ -->
+
+
+        <li class="sousTitleMenus headerLeftHide" >
+          <a href="/profil">
+            <img class="" src="<?php echo $file . '/image/icon/compte.svg'; ?>" title="Informations du compte">
+            <h3>Profil</h3>
+          </a>
+        </li>
+
+        <li class="headerLeftHide">
+          <ul class="sousListMenus">
+            <?php
+            if (!isset($_SESSION['profil'])) { ?>
+              <li class="hoverStyle"><a href="/profil">Connexion</a></li>
+              <li class="hoverStyle"><a href="/profil/add">Créer un compte</a></li>
+            <?php } else { ?>
+              <li class="hoverStyle"><a href="/profil/edit">Modifier le profil</a></li>
+              <li class="hoverStyle"><a href="/profil?act=disconnect">Se déconnecter</a></li>
+          <?php } ?>
+          </ul>
+        </li>
+      </ul>
   </div>
+
+  <a href="/" class="aNerf"><h2 class="name">RecipeList</h2></a>
+
+
   <div class="searchBorderColored backroundStyle">
     <div class="searchBar">
       <form class="recherche" id="formRecherche" method="GET" action="">
@@ -91,15 +123,14 @@
                 <img class="profilHEADER infosCompte" src="<?php echo $file; if (isset($_SESSION['profilIMG'])) { echo $_SESSION['profilIMG']; }else{ echo '/image/icon/compte.svg'; } ?>" title="Informations du compte">
                 <div class="titleDeroulant">
                   <p>Profil</p>
-                  <div class="backroundStyle"></div>
                 </div>
               </div>
             </a>
             <div class="sous backroundStyle">
               <ul>
-                <?php if (isset($_SESSION['profil'])) { ?><li class="hoverStyle"><a href="#"> <?= $_SESSION['profil']; ?></a></li><?php } ?>
-                <li class="hoverStyle"><a href="/profil/edit">Modifier le profil</a></li>
-                <li class="hoverStyle"><a href="/profil?act=disconnect">Se déconnecter</a></li>
+                <?php if (isset($_SESSION['profil'])) { ?><li class=""><a href="/profil"> <?= $_SESSION['profil']; ?></a></li><?php } ?>
+                <li class=""><a href="/profil/edit">Modifier le profil</a></li>
+                <li class=""><a href="/profil?act=disconnect">Se déconnecter</a></li>
               <ul>
             </div>
           </li>
@@ -109,3 +140,11 @@
   <?php } ?>
 
 </header>
+<?php if (isset($_SESSION['profil'])) { ?>
+<nav class="sousHeader">
+   <a href="#"><img class="" src="<?= $file ?>/image/icon/Recipe.png" title="IconRecette"><p>Mets recettes</p></a>
+   <a href="#"><img class="" src="<?= $file ?>/image/icon/RecipeADD.png" title="AddIconRecette"><p>Ajouter une recette</p></a>
+   <a href="#"><img class="" src="<?= $file ?>/image/icon/Frigo.png" title="IconRecette"><p>Mon frigo</p></a>
+   <a href="/liste"><img class="" src="<?= $file ?>/image/icon/liste.png" title="liste"><p>Mets listes</p></a>
+</nav>
+<?php } ?>
