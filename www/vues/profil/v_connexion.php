@@ -22,13 +22,13 @@
         <?php } ?>
 
   			<p>
-          <label for="userLogin373892JD838js82">Email utilisateur</label>
+          <label class="label" for="userLogin373892JD838js82">Email utilisateur</label>
   				<div>
-  					<input id="userLogin373892JD838js82" placeholder="Email utilisateur" type="email" value="<?php if(isset($_POST["email"])){ echo $_POST["email"]; } ?>" name="email" required/>
+  					<input class="input" id="userLogin373892JD838js82" placeholder="Email utilisateur" type="email" value="<?php if(isset($_POST["email"])){ echo $_POST["email"]; } ?>" name="email" required/>
   				</div>
   			</p>
   			<p>
-          <label for="userPass373892JD838js82">Mot de passe</label>
+          <label class="label" for="userPass373892JD838js82">Mot de passe</label>
   				<div class="flex">
   					<input id="userPass373892JD838js82" minlength="5" placeholder="Mot de passe" class="input" type="password" value="<?php if(isset($_POST["pass"])){ echo $_POST["pass"]; } ?>" name="pass" required />
   					<img width="20px" id="viewIMG" onclick="viewPassword()" src="<?= $file ?>image/icon/eyes.svg" alt="voir le mot de passe">

@@ -65,44 +65,44 @@
       <p>
         <div class="flex-column">
           <img class="center3 imgForProfil profilGrand label-file" id="blah" src="#" alt="" />
-          <label for="imgProfil" class="center3 label-file button">Image de profil</label>
+          <label for="imgProfil" class="center3 label-file button label">Image de profil</label>
           <input id="imgProfil" accept="image/jpeg image/x-png" class="center3 input imput-file" type="file" name="imgProfil" />
           <p class="error" id="errorPP"></p>
         </div>
       </p>
 
 			<p>
-				<label for="userEmail">Email utilisateur</label>
+				<label class="label" for="userEmail">Email utilisateur</label>
 				<div>
-					<input id="userEmail" placeholder="Email utilisateur" type="email" value="<?php if(isset($_POST["email"])){ echo $_POST["email"]; } ?>" name="email" required/>
+					<input class="input" id="userEmail" placeholder="Email utilisateur" type="email" value="<?php if(isset($_POST["email"])){ echo $_POST["email"]; } ?>" name="email" required/>
 				</div>
 			</p>
       <p>
-        <label for="prenom">Prénom</label>
+        <label class="label" for="prenom">Prénom</label>
         <div>
-          <input id="prenom" placeholder="Prénom" type="text" value="<?php if(isset($_POST["prenom"])){ echo $_POST["prenom"]; } ?>" name="prenom" required />
+          <input class="input" id="prenom" placeholder="Prénom" type="text" value="<?php if(isset($_POST["prenom"])){ echo $_POST["prenom"]; } ?>" name="prenom" required />
         </div>
       </p>
       <p>
-        <label for="nom">Nom</label>
+        <label class="label" for="nom">Nom</label>
         <div>
-          <input id="nom" placeholder="Nom" type="text" value="<?php if(isset($_POST["nom"])){ echo $_POST["nom"]; } ?>" name="nom" required />
+          <input class="input" id="nom" placeholder="Nom" type="text" value="<?php if(isset($_POST["nom"])){ echo $_POST["nom"]; } ?>" name="nom" required />
         </div>
       </p>
       <p>
-        <label for="dateBirth">Date de naissance</label>
+        <label class="label" for="dateBirth">Date de naissance</label>
         <div>
-          <input id="dateBirth" type="date" value="<?php if(isset($_POST["dateBirth"])){ echo $_POST["dateBirth"]; } ?>" name="dateBirth" required  />
+          <input class="input" id="dateBirth" type="date" value="<?php if(isset($_POST["dateBirth"])){ echo $_POST["dateBirth"]; } ?>" name="dateBirth" required  />
         </div>
       </p>
 			<p>
-				<label for="pass">Mot de passe</label>
+				<label class="label" for="pass">Mot de passe</label>
 				<div class="flex">
 					<input id="pass" minlength="5" placeholder="Mot de passe" class="input" type="password" value="" name="pass" required />
 				</div>
 			</p>
       <p>
-        <label for="passVerif">Vériffication du mot de passe</label>
+        <label class="label" for="passVerif">Vériffication du mot de passe</label>
         <div class="flex">
           <input id="passVerif" onchange="verifPassword()" placeholder="Vériffication du mot de passe" class="input" type="password" value="" name="passVerif" required />
         </div>

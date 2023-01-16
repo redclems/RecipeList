@@ -300,6 +300,40 @@ foreach ($action as $u){
     $stmt->execute();
   }
 
+//list type
+  $typeList=array(
+      array('id' => 1,
+      'wording' => "liste de course"
+      ),
+      array('id' => 2,
+      'wording' => "liste boulangerie"
+      ),
+      array('id' => 3,
+      'wording' => "liste traiteur"
+      ),
+      array('id' => 4,
+      'wording' => "liste boucherie"
+      ),
+      array('id' => 5,
+      'wording' => "liste Poisssonnerie"
+      ),
+      array('id' => 5,
+      'wording' => "liste Primeur"
+      )
+      );
+
+  $insert="INSERT INTO TYPELIST (id, wording) VALUES (:id, :wording);";
+  $stmt=$file_db->prepare($insert);
+  // on lie les parametres aux variables
+  $stmt->bindParam(':id',$id);
+  $stmt->bindParam(':wording',$wording);
+
+  foreach ($typeList as $u){
+    $id    =$u['id'];
+    $wording =$u['wording'];
+    $stmt->execute();
+  }
+
   echo "Insertion en base reussie !";
   // on ferme la connexion
   $file_db=null;

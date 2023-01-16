@@ -22,27 +22,27 @@
         </p>
 
   			<p>
-  				<label for="userEmail">Email utilisateur</label>
+  				<label class="label" for="userEmail">Email utilisateur</label>
   				<div>
-  					<input id="userEmail" placeholder="Email utilisateur" type="email" value="<?php if(isset($util["email"])){ echo $util["email"]; } ?>" name="email" readonly required/>
+  					<input class="input" id="userEmail" placeholder="Email utilisateur" type="email" value="<?php if(isset($util["email"])){ echo $util["email"]; } ?>" name="email" readonly required/>
   				</div>
   			</p>
         <p>
-          <label for="prenom">Prénom</label>
+          <label class="label" for="prenom">Prénom</label>
           <div>
-            <input id="prenom" placeholder="Prénom" type="text" value="<?php if(isset($util["name"])){ echo $util["name"]; }  ?>" name="prenom" readonly required />
+            <input class="input" id="prenom" placeholder="Prénom" type="text" value="<?php if(isset($util["name"])){ echo $util["name"]; }  ?>" name="prenom" readonly required />
           </div>
         </p>
         <p>
-          <label for="nom">Nom</label>
+          <label class="label" for="nom">Nom</label>
           <div>
-            <input id="nom" placeholder="Nom" type="text" value="<?php if(isset($util["surName"])){ echo $util["surName"]; } ?>" name="nom" readonly required />
+            <input class="input" id="nom" placeholder="Nom" type="text" value="<?php if(isset($util["surName"])){ echo $util["surName"]; } ?>" name="nom" readonly required />
           </div>
         </p>
         <p>
-          <label for="dateBirth">Date de naissance utilisateur</label>
+          <label class="label" for="dateBirth">Date de naissance utilisateur</label>
           <div>
-            <input id="dateBirth" type="date" value="<?php if(isset($util["dateBirth"])){ echo $util["dateBirth"]; } ?>" name="dateBirth" readonly required  />
+            <input class="input" id="dateBirth" type="date" value="<?php if(isset($util["dateBirth"])){ echo $util["dateBirth"]; } ?>" name="dateBirth" readonly required  />
           </div>
         </p>
         <div class="flex">

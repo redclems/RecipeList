@@ -41,8 +41,17 @@ try{
     id number(10),
     name VarChar2(20),
     idCreator VarChar2(25),
+    idType number(10),
     primary key (id),
-    foreign key (idCreator) REFERENCES USER(email)
+    foreign key (idCreator) REFERENCES USER(email),
+    foreign key (idType) REFERENCES TYPELIST(id)
+  );");
+
+  $file_db->exec("create table if not exists TYPELIST
+  (
+    id number(10),
+    wording VarChar2(20),
+    primary key (id)
   );");
 
   $file_db->exec("create table if not exists YOURLIST

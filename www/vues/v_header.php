@@ -6,6 +6,9 @@
     <link rel="stylesheet" type="text/css" href="<?= $file ?>/style/header.css">
     <link rel="stylesheet" type="text/css" href="<?= $file ?>/style/centerPage.css">
     <link rel="stylesheet" type="text/css" href="<?= $file ?>/style/note.css">
+    <link rel="stylesheet" type="text/css" href="<?= $file ?>style/formulaire.css">
+    <link rel="stylesheet" type="text/css" href="<?= $file ?>style/popup.css">
+
 
     <meta charset="UTF-8">
 </head>

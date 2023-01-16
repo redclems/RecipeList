@@ -1,4 +1,4 @@
-input{
+.input{
     width: 40vw;
     min-width: 80%;
     height: 1.5em;
@@ -6,7 +6,11 @@ input{
     background-color: #f4f4f4;
 }
 
-label{
+.input:hover{
+  filter: brightness(96%);
+}
+
+.label{
     font-size: 1.2em;
 }
 
@@ -56,6 +60,10 @@ button, .button{
 
 button{
   background-color: #8bfaac;
+}
+
+button:hover{
+  filter: brightness(96%);
 }
 
 .back {

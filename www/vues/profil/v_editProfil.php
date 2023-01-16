@@ -66,34 +66,34 @@
         <p>
           <div class="flex-column">
             <img class="center3 imgForProfil profilGrand label-file" id="blah" src="<?php if(isset($imgProfil["urlImage"])){ echo $imgProfil["urlImage"] . "?time=" . time(); }else{ echo "#"; }  ?>" alt="" />
-            <label for="imgProfil" class="center3 label-file button">Image de profil</label>
+            <label for="imgProfil" class="center3 label-file button label">Image de profil</label>
             <input id="imgProfil" accept="image/jpeg image/x-png" class="center3 input imput-file" type="file" name="imgProfil" />
             <p class="error" id="errorPP"></p>
           </div>
         </p>
 
   			<p>
-  				<label for="userEmail">Email utilisateur</label>
+  				<label class="label" for="userEmail">Email utilisateur</label>
   				<div>
-  					<input id="userEmail" placeholder="Email utilisateur" type="email" value="<?php if(isset($util["email"])){ echo $util["email"]; } ?>" name="email" readonly required/>
+  					<input class="input" id="userEmail" placeholder="Email utilisateur" type="email" value="<?php if(isset($util["email"])){ echo $util["email"]; } ?>" name="email" readonly required/>
   				</div>
   			</p>
         <p>
-          <label for="prenom">Prénom</label>
+          <label class="label" for="prenom">Prénom</label>
           <div>
-            <input id="prenom" placeholder="Prénom" type="text" value="<?php if(isset($util["name"])){ echo $util["name"]; }  ?>" name="prenom" required />
+            <input class="input" id="prenom" placeholder="Prénom" type="text" value="<?php if(isset($util["name"])){ echo $util["name"]; }  ?>" name="prenom" required />
           </div>
         </p>
         <p>
-          <label for="nom">Nom</label>
+          <label class="label" for="nom">Nom</label>
           <div>
-            <input id="nom" placeholder="Nom" type="text" value="<?php if(isset($util["surName"])){ echo $util["surName"]; } ?>" name="nom" required />
+            <input class="input" id="nom" placeholder="Nom" type="text" value="<?php if(isset($util["surName"])){ echo $util["surName"]; } ?>" name="nom" required />
           </div>
         </p>
         <p>
-          <label for="dateBirth">Date de naissance utilisateur</label>
+          <label class="label" for="dateBirth">Date de naissance utilisateur</label>
           <div>
-            <input id="dateBirth" type="date" value="<?php if(isset($util["dateBirth"])){ echo $util["dateBirth"]; } ?>" name="dateBirth" required  />
+            <input class="input" id="dateBirth" type="date" value="<?php if(isset($util["dateBirth"])){ echo $util["dateBirth"]; } ?>" name="dateBirth" required  />
           </div>
         </p>
 
@@ -112,19 +112,19 @@
 
         <h2 class="changer">Changer le mot de passe</h2>
         <p>
-          <label for="pass">Mot de passe</label>
+          <label class="label" for="pass">Mot de passe</label>
           <div class="flex">
             <input id="pass" minlength="5" placeholder="Mot de passe" class="input" type="password" name="pass" required />
           </div>
         </p>
         <p>
-          <label for="passnew">Nouveu mot de passe</label>
+          <label class="label" for="passnew">Nouveu mot de passe</label>
           <div class="flex">
             <input id="passnew" minlength="5" placeholder="Mot de passe" class="input" type="password" name="passnew" required />
           </div>
         </p>
         <p>
-          <label for="passVerif">Nouveu du mot de passe vérification</label>
+          <label class="label" for="passVerif">Nouveu du mot de passe vérification</label>
           <div class="flex">
             <input id="passVerif" onchange="verifPassword()" placeholder="Mot de passe" class="input" type="password" name="passVerif" required />
           </div>
